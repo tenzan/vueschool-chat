@@ -50,7 +50,7 @@
 
         const database = firebase.database()
 
-        database.ref('messages').on('value', snapshot => console.log(snapshot.val()))
+        database.ref('messages').on('child_added', snapshot => console.log(snapshot.val()))
 
         new Vue({
             el: "#chat",
